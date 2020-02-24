@@ -1,1 +1,22 @@
+def firstDigit(n):
+    quotient = 1
+    dividend = n
 
+    while (quotient):
+        quotient = int(dividend / 10)
+        remainder = dividend % 10
+        dividend = quotient
+        firstDigit = remainder
+
+    return firstDigit
+
+def lastDigit(n):
+    remainder =  n % 10
+    lastDigit = remainder
+
+    return lastDigit
+
+txt = "The first and last digit of {} is {} and {}"
+num = int(input("Enter a number:"))
+
+print(txt.format(num, firstDigit(num), lastDigit(num)))
